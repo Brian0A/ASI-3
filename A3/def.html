@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Quiz</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="quiz-container">
+  <h1>Interactive Quiz</h1>
+
+  <div id="authentication">
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button type="button" onclick="startQuiz()">Start Quiz</button>
+    </form>
+  </div>
+
+  <div id="quiz" style="display: none;">
+    <form id="quiz-form">
+      <div class="question" id="question1">
+        <h2>Question 1: What is 2 + 2?</h2>
+        <input type="radio" name="answer1" value="4"> 4<br>
+        <input type="radio" name="answer1" value="3"> 3<br>
+        <input type="radio" name="answer1" value="5"> 5<br>
+        <button type="button" onclick="checkAnswer(1)">Submit</button>
+        <p id="feedback1"></p>
+      </div>
+
+      <div class="question" id="question2">
+        <h2>Question 2: Which planet is closest to the sun?</h2>
+        <input type="radio" name="answer2" value="mercury"> Mercury<br>
+        <input type="radio" name="answer2" value="venus"> Venus<br>
+        <input type="radio" name="answer2" value="earth"> Earth<br>
+        <button type="button" onclick="checkAnswer(2)">Submit</button>
+        <p id="feedback2"></p>
+      </div>
+
+      <!-- Add more questions here -->
+
+      <div id="result" style="display: none;">
+        <h2>Quiz Completed!</h2>
+        <p>Your final score is <span id="score"></span>.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
